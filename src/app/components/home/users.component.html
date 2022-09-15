@@ -1,1 +1,41 @@
-<p>users works!</p>
+<nav ngbNav #nav="ngbNav" [activeId]="2" class="navbar navbar-expand-lg bg-light">
+    
+
+    <li ngbDropdown class="nav-item">
+      <a href (click)="false" class="nav-link" ngbDropdownToggle>Parametros</a>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem>Tipo documento</button>
+        <button ngbDropdownItem>Tipo estado de cartera</button>
+        <button ngbDropdownItem> Tipo concepto</button>
+        <button ngbDropdownItem> Tipo deuda</button>
+      </div>
+    </li>
+    <li ngbDropdown class="nav-item">
+        <a href (click)="false" class="nav-link" ngbDropdownToggle>Procesos</a>
+        <div ngbDropdownMenu>
+          <button ngbDropdownItem>Carga de cartera</button>
+          <button ngbDropdownItem>Carga de pagos</button>
+          <button ngbDropdownItem> Carga de gestion</button>
+ 
+        </div>
+      </li>
+
+      <li ngbDropdown class="nav-item">
+        <a href (click)="false" class="nav-link" ngbDropdownToggle>Informe</a>
+        <div ngbDropdownMenu>
+          <button ngbDropdownItem>Consolidado x concepto</button>
+          <button ngbDropdownItem>Informe por proyecto</button>
+          <button ngbDropdownItem>Comparativo por proyecto  </button>
+ 
+        </div>
+      </li>
+      <li [ngbNavItem]="1">
+        <a ngbNavLink (click)="closesecion()">Salir</a>
+     
+      </li>
+  
+    </nav>
+  
+  
+ 
+  
