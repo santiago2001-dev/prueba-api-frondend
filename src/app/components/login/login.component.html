@@ -1,0 +1,37 @@
+<div class="login">
+    <div class="form">
+      <form [formGroup]="loginForm"  (submit)="autenticacion()" class="login-form">
+        <h1 class="material-icons">Bienvenido a los contactos de ITA</h1>
+        
+        <div class="container mb-3">
+
+          <input type="text" formControlName="user" placeholder="tú usuario ">
+          <div *ngIf="user?.dirty &&(user?.dirty || user?.touched)">
+          <div id="MensajeTiendaNew"*ngIf="loginForm.get('user')?.hasError('required')">
+          <p>el correo es <strong>obligatorio</strong></p>
+          </div>
+       
+          </div>
+      </div>
+
+
+      <div class="container mb-3">
+
+        <input formControlName="pass" type="password" placeholder="Contraseña" required />
+        <div *ngIf="pass?.dirty &&(pass?.dirty || pass?.touched)">
+          <div class="container mb-3">
+          <div id="MensajeTiendaNew" *ngIf="loginForm.get('pass')?.hasError('pass')">
+        <p>la conntraseña es un campo <strong>obligatorio</strong></p>
+        </div>
+          </div>
+       
+     </div>
+    </div>
+       
+        <button>Entrar</button> 
+       
+      </form>  
+      <br>
+
+    </div>
+  </div>
