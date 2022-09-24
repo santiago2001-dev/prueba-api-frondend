@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import {LoginComponent} from './components/login/login.component';
-import {AuthGuard}  from './guards/login.guard'
-import { UsersComponent } from './components/home/users.component';
+
+import { UsersComponent } from './components/cifrar/users.component';
+import { CrudComponent } from './components/crud/crud.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { DescifrarComponent } from './components/descifrar/descifrar.component';
 const routes : Routes = [
-  {path: 'login',component: LoginComponent},
-  {path : 'inicio',component :UsersComponent,canActivate:[AuthGuard]}
-  
+
+  {path : '',component :CrudComponent},
+  {path: 'addProduct',component : AddProductComponent},
+  {path : 'updateProduct/:id',component : AddProductComponent},
+  {path: 'encriptar',component: UsersComponent},
+  {path: 'descifrar',component: DescifrarComponent}
 ]
 
 

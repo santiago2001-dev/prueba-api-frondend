@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/encriptar">Encriptar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/descifrar">Descifrar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Productos</a>
+        </li>
+ 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<br>
+
+
+<div class="container mt-5" id="fondo">
+
+   
+
+  <br>
+  <h1>ENCRIPTAR FRASE</h1>
+
+      <form class="form" [formGroup]="mensajeForm" (submit)="encriptarMensaje()">
+
+
+        <div class="container mb-3">
+
+
+            <input type="number" formControlName="clave" class="form-control" placeholder="ingresa la clave" required>
+          
+       </div>
+              <div class="container mb-3">
+
+                <input type="text" formControlName="frase" class="form-control" placeholder="ingresa la frase a encriptar" required>
+             
+                    </div>
+  <div class="container mb-3">
+           <button class="btn btn-dark btn-sm"> Enviar</button>
+
+        </div>
+
+        <br>
+    </form>
+
+
+
+</div>
+  
+  
+ 
+  

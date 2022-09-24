@@ -2,19 +2,25 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {JwtHelperService,JWT_OPTIONS} from'@auth0/angular-jwt'
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import {UsersComponent}from './components/home/users.component'
+
+import {UsersComponent}from './components/cifrar/users.component'
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 //petciones http
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CrudComponent } from './components/crud/crud.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { DescifrarComponent } from './components/descifrar/descifrar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    UsersComponent
+
+    UsersComponent,
+     CrudComponent,
+     AddProductComponent,
+     DescifrarComponent
 
   ],
   imports: [
